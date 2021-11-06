@@ -1,0 +1,217 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* VARS */
+body {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 107px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5e7d5;
+}
+
+header nav .navbar-toggler {
+  background-color: black;
+}
+
+header nav .nav-link {
+  padding: 0 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #914450;
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+}
+
+main .portada {
+  position: relative;
+}
+
+main .portada img {
+  width: 100%;
+  height: auto;
+}
+
+main .portada .textPortada {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 29px;
+}
+
+main .portada .textPortada .textBig {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-size: calc(1rem + 4vw);
+  font-weight: 900;
+  font-style: black;
+  line-height: calc(1rem + 5vw);
+  color: #fff;
+}
+
+main .portada .textPortada .textSmall {
+  margin-right: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: calc(0.1rem + 4vw);
+  font-weight: 500;
+  line-height: calc(1rem + 5vw);
+  color: #fff;
+}
+
+@media (min-width: 1280px) {
+  main .portada .textPortada .textBig {
+    font-size: 75px;
+    line-height: 79px;
+  }
+  main .portada .textPortada .textSmall {
+    line-height: 79px;
+  }
+}
+
+@media (min-width: 485px) {
+  main .portada .textPortada .textSmall {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 515px) {
+  main .portada .textPortada .textSmall {
+    margin-top: 3px;
+    line-height: 20px;
+  }
+}
+
+main .sectionServicios {
+  width: 100%;
+  margin-top: 5px;
+}
+
+main .servicios {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-bottom: 100px;
+}
+
+main .servicios > div {
+  margin: 5px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  width: 24%;
+  min-width: 300px;
+  max-width: 600px;
+  height: 252px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: blue;
+  border: 1px solid;
+}
+
+main .servicios > div .groupServicios {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 30px 0px 20px 0px;
+  margin-left: -30px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+main .servicios > div .groupServicios .tituloServicio {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+main .servicios > div .groupServicios .itemsServicio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .servicios > div .groupServicios .itemsServicio .itemServicio {
+  font-size: 19px;
+  font-size: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+main .servicios .editorial .itemsServicio {
+  padding-bottom: 10px;
+}
+/*# sourceMappingURL=styles.css.map */
