@@ -6,11 +6,12 @@
           box-sizing: border-box;
 }
 
+/* VARS */
 html {
   font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* VARS */
 body {
   width: 100%;
   max-width: 1280px;
@@ -20,7 +21,7 @@ body {
 header {
   width: 100%;
   max-width: 1280px;
-  min-height: 107px;
+  min-height: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,7 +30,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f5e7d5;
+  background-color: #F5E7D5;
 }
 
 header nav .navbar-toggler {
@@ -60,6 +61,7 @@ main .portada .textPortada {
   position: absolute;
   top: 0;
   bottom: 0;
+  margin-left: 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,10 +72,10 @@ main .portada .textPortada {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 29px;
 }
 
 main .portada .textPortada .textBig {
+  margin-bottom: 3vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,51 +84,57 @@ main .portada .textPortada .textBig {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: "Montserrat", sans-serif;
-  font-size: calc(1rem + 4vw);
+  font-size: calc(.7rem + 4vw);
   font-weight: 900;
   font-style: black;
   line-height: calc(1rem + 5vw);
-  color: #fff;
+  color: #B55158;
 }
 
 main .portada .textPortada .textSmall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-right: 40px;
   font-family: "Montserrat", sans-serif;
-  font-size: calc(0.1rem + 4vw);
-  font-weight: 500;
-  line-height: calc(1rem + 5vw);
-  color: #fff;
+  font-size: calc(0.15rem + 2vw);
+  font-weight: 600;
+  font-style: italic;
+  line-height: calc(.3rem + 3vw);
+  color: #9a9a9a;
+}
+
+main .portada .textPortada .textSmall .bold {
+  font-weight: 800;
 }
 
 @media (min-width: 1280px) {
+  main .portada .textPortada {
+    margin-left: 124px;
+  }
   main .portada .textPortada .textBig {
-    font-size: 75px;
-    line-height: 79px;
+    font-size: 65px;
+    line-height: 69.42px;
   }
   main .portada .textPortada .textSmall {
-    line-height: 79px;
-  }
-}
-
-@media (min-width: 485px) {
-  main .portada .textPortada .textSmall {
-    font-size: 21px;
-  }
-}
-
-@media (max-width: 515px) {
-  main .portada .textPortada .textSmall {
-    margin-top: 3px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
 main .sectionServicios {
   width: 100%;
-  margin-top: 5px;
+  margin: 8px 0;
 }
 
-main .servicios {
+main .consultanos {
+  padding: 0 30px;
+  padding-top: 52px;
+  padding-bottom: 30px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,22 +144,168 @@ main .servicios {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding-bottom: 100px;
+  background-color: #B55158;
 }
 
-main .servicios > div {
-  margin: 5px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+main .consultanos .divText {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* .textSmall{
+                margin-bottom: 22px;
+                display: flex;
+                flex-direction: column;
+                font-family: $montserrat;
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 30.48px;
+                color: $color-creme;
+            } */
+}
+
+main .consultanos .divText .textBig {
+  margin-bottom: 22px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: calc(1.1rem + 4vw);
+  line-height: calc(2rem + 3vw);
+  color: #F5E7D5;
+}
+
+main .consultanos .divText .textBig > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .consultanos .divBtn {
+  padding: 22px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .consultanos .divBtn .btnConsultanos {
+  width: 100%;
+  max-width: 301px;
+  min-width: 244px;
+  height: 74px;
+  padding: 21px 0;
+  border: none;
+  border-radius: 48px;
+  background-color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #914450;
+}
+
+@media (min-width: 960px) {
+  main .consultanos .divText .textBig {
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 56.6px;
+  }
+  main .consultanos .divText .textSmall {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30.48px;
+  }
+}
+
+footer {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  width: 100%;
+  min-height: 160px;
+  border-bottom: 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footer_container {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
-  width: 24%;
-  min-width: 300px;
-  max-width: 600px;
-  height: 252px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer_container > div {
+  min-width: 33%;
+  margin-top: 10px;
+}
+
+footer .footer_container .footer_contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer_container .footer_contacto > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #914450;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+footer .footer_container .footer_contacto .footer_contacto_title {
+  text-align: center;
+  font-weight: 700;
+}
+
+footer .footer_container .footer_contacto .footer_contacto_mail {
+  margin: 5px 0;
+}
+
+footer .footer_container .footer_contacto .footer_contacto_cel {
+  text-align: center;
+}
+
+footer .footer_container .footer_logo {
+  max-width: 193px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,56 +316,121 @@ main .servicios > div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: blue;
-  border: 1px solid;
 }
 
-main .servicios > div .groupServicios {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 30px 0px 20px 0px;
-  margin-left: -30px;
-  font-family: "Montserrat", sans-serif;
-  color: #fff;
+footer .footer_container .footer_logo img {
+  width: 193px;
+  height: auto;
 }
 
-main .servicios > div .groupServicios .tituloServicio {
-  font-size: 40px;
-  font-weight: 600;
-}
-
-main .servicios > div .groupServicios .itemsServicio {
+footer .footer_container .footer_rrss {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main .servicios > div .groupServicios .itemsServicio .itemServicio {
-  font-size: 19px;
-  font-size: "Montserrat", sans-serif;
+footer .footer_container .footer_rrss img {
+  margin: 10px;
+  width: 34px;
+  height: 34px;
+}
+
+footer .footer_copyright {
+  text-align: center;
+  font-size: 14px;
+  color: #914450;
   font-weight: 500;
-  line-height: 23px;
 }
 
-main .servicios .editorial .itemsServicio {
-  padding-bottom: 10px;
+.slider {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  margin: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 0;
+  -webkit-transition: 0.3s left ease-in-out;
+  transition: 0.3s left ease-in-out;
+}
+
+.slider .item {
+  margin-right: 10px;
+}
+
+.slider .item:last-child {
+  margin-right: 0;
+}
+
+.ctrl {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.ctrl-btn {
+  padding: 20px 20px;
+  min-width: 50px;
+  background: #fff;
+  border: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  margin-top: -27.5px;
+}
+
+.ctrl-btn.pro-prev {
+  left: 0;
+}
+
+.ctrl-btn.pro-next {
+  right: 0;
+}
+
+.servicio {
+  /* position: relative; */
+  width: 299px;
+  height: 397px;
+  /* display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center; */
+  border: 1px solid;
+}
+
+.servicio .elipse {
+  /* width: 76px;
+          height: 76px; */
+  padding: 20px;
+  background-color: #ebebeb;
+  border-radius: 100%;
+}
+
+.servicio .servicioTitle {
+  font-size: 27px;
+  font-weight: 700;
+  color: #914450;
+}
+
+.servicio .servicioDescription {
+  font-size: 18px;
+  font-weight: 400;
+  color: #B55158;
 }
 /*# sourceMappingURL=styles.css.map */

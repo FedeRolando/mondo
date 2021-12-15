@@ -4,12 +4,19 @@
     padding: 0;
     box-sizing: border-box;
 }
-html {
-    font-size: 16px;
-}
 
 /* VARS */
 $montserrat: "Montserrat", sans-serif;
+$color-principal: #B55158;
+$color-creme: #F5E7D5;
+$color-dark: #914450;
+$color-grey: #C6C6C6;
+$color-textSmall: #9a9a9a;
+
+html {
+    font-size: 16px;
+    font-family: $montserrat;
+}
 
 body {
     width: 100%;
@@ -19,11 +26,11 @@ body {
 header {
     width: 100%;
     max-width: 1280px;
-    min-height: 107px;
+    min-height: 90px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #f5e7d5;
+    background-color: $color-creme;
     nav {
         .navbar-toggler {
             background-color: black;
@@ -31,7 +38,7 @@ header {
         .nav-link {
             padding: 0 1rem;
             font-family: $montserrat;
-            color: #914450;
+            color: $color-dark;
             text-decoration: none;
         }
     }
@@ -49,105 +56,274 @@ main {
             position: absolute;
             top: 0;
             bottom: 0;
+            margin-left: 5vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-left: 29px;
             .textBig {
+                margin-bottom: 3vw;
                 display: flex;
                 flex-direction: column;
                 font-family: $montserrat;
-                font-size: calc(1rem + 4vw);
+                font-size: calc(.7rem + 4vw);
                 font-weight: 900;
                 font-style: black;
                 line-height: calc(1rem + 5vw);
-                color: #fff;
+                color: $color-principal;
             }
             .textSmall {
+                display: flex;
+                flex-direction: column;
                 margin-right: 40px;
                 font-family: $montserrat;
-                font-size: calc(0.1rem + 4vw);
-                font-weight: 500;
-                line-height: calc(1rem + 5vw);
-                color: #fff;
+                font-size: calc(0.15rem + 2vw);
+                font-weight: 600;
+                font-style: italic;
+                line-height: calc(.3rem + 3vw);
+                color: $color-textSmall;
+                .bold{
+                    font-weight: 800;
+                }
             }
-
+            
             @media (min-width: 1280px) {
+                margin-left: 124px;
                 .textBig {
-                    font-size: 75px;
-                    line-height: 79px;
+                    font-size: 65px;
+                    line-height: 69.42px;
                 }
                 .textSmall {
-                    line-height: 79px;
-                }
-            }
-            @media (min-width: 485px) {
-                .textSmall {
-                    font-size: 21px;
-                }
-            }
-            @media (max-width: 515px) {
-                .textSmall {
-                    margin-top: 3px;
-                    line-height: 20px;
+                    font-size: 20px;
+                    line-height: 24px;
                 }
             }
         }
     }
     .sectionServicios {
         width: 100%;
-        margin-top: 5px;
+        margin: 8px 0;
     }
-    .servicios {
+    .consultanos{
+        padding: 0 30px;
+        padding-top: 52px;
+        padding-bottom: 30px;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        
-        padding-bottom: 100px;
-        >div {
-            margin: 5px;            
-            box-sizing: content-box;
-            flex-grow: 1;
-            flex-shrink: 1;
-            width: 24%;
-            min-width: 300px;
-            max-width: 600px;
-            height: 252px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: blue;
-            border: 1px solid;
-            .groupServicios{
-                flex-grow: 1;
+        background-color: $color-principal;
+        .divText{
+            display: inline-flex;
+            justify-content: center;
+            .textBig{
+                margin-bottom: 22px;
                 display: inline-flex;
                 flex-direction: column;
-                justify-content: space-between;
-                align-items: flex-start;
-                padding: 30px 0px 20px 0px;
-                margin-left: -30px;
                 font-family: $montserrat;
-                color:#fff;
-                .tituloServicio{
-                    font-size: 40px;
-                    
-                    font-weight: 600;
-                }
-                .itemsServicio{
+                font-weight: 700;
+                font-size: calc(1.1rem + 4vw);
+                line-height: calc(2rem + 3vw);
+                color: $color-creme;
+                >div{
                     display: flex;
-                    flex-direction: column;
-                    .itemServicio{
-                        font-size: 19px;
-                        font-size: $montserrat;
-                        font-weight: 500;
-                        line-height: 23px;
-                    }
+                    flex-wrap: wrap;
                 }
             }
+            /* .textSmall{
+                margin-bottom: 22px;
+                display: flex;
+                flex-direction: column;
+                font-family: $montserrat;
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 30.48px;
+                color: $color-creme;
+            } */
         }
-        .editorial .itemsServicio{
-            padding-bottom: 10px;
+        .divBtn{
+            padding: 22px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btnConsultanos{
+                width: 100%;
+                max-width: 301px;
+                min-width: 244px;
+                height: 74px;
+                padding: 21px 0;
+                border: none;
+                border-radius: 48px;
+                background-color: #FFF;
+                font-family: $montserrat;
+                font-weight: 700;
+                font-size: 25px;
+                color: $color-dark;
+            }
+        }
+        @media (min-width: 960px){
+            .divText{
+                .textBig{
+                    font-weight: 900;
+                    font-size: 45px;
+                    line-height: 56.6px;
+                }
+                .textSmall{
+                    font-weight: 600;
+                    font-size: 25px;
+                    line-height: 30.48px;
+                }
+            }        
         }
     }
 }
+
+footer{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 100%;
+    min-height: 160px;
+    border-bottom: 1px solid;
+    display: flex;
+    flex-direction: column;
+    .footer_container{
+        >div{
+            min-width: 33%;
+            margin-top: 10px;
+        }
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        .footer_contacto{
+            display: flex;
+            justify-content: center;
+            >div{
+                display: flex;
+                flex-direction: column;
+                color: $color-dark;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            .footer_contacto_title{
+                text-align: center;
+                font-weight: 700;
+            }
+            .footer_contacto_mail{
+                margin: 5px 0;
+            }
+            .footer_contacto_cel{
+                text-align: center;
+            }
+        }
+        .footer_logo{
+            max-width: 193px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 193px;
+                height: auto;
+            }
+        }
+        .footer_rrss{
+            display: flex;
+            justify-content: center;
+            img{
+                margin: 10px;
+                width: 34px;
+                height: 34px;
+            }
+        }
+    }
+    .footer_copyright{
+        text-align: center;
+        font-size: 14px;
+        color: $color-dark;
+        font-weight: 500;
+    }
+}
+
+.slider {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }  
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slider .slide {
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: 0.3s left ease-in-out;
+  }
+  
+  .slider .item {
+    margin-right: 10px;
+  }
+  
+  .slider .item:last-child {
+    margin-right: 0;
+  }
+  
+  .ctrl {
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  .ctrl-btn {
+    padding: 20px 20px;
+    min-width: 50px;
+    background: #fff;
+    border: none;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+  
+    position: absolute;
+    top: 50%;
+    margin-top: -27.5px;
+  }
+  
+  .ctrl-btn.pro-prev {
+    left: 0;
+  }
+  
+  .ctrl-btn.pro-next {
+    right: 0;
+  }
+
+    .servicio{
+      /* position: relative; */
+      width: 299px;
+      height: 397px;
+      /* display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center; */
+      border: 1px solid;
+      .elipse{
+          /* width: 76px;
+          height: 76px; */
+          padding: 20px;
+          background-color: #ebebeb;
+          border-radius: 100%;
+      }
+      .servicioTitle{
+        font-size: 27px;
+        font-weight: 700;
+        color: $color-dark;
+      }
+      .servicioDescription{
+        font-size: 18px;
+        font-weight: 400;
+        color: $color-principal;
+      }
+    }
