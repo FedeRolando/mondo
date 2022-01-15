@@ -12,6 +12,8 @@ $color-creme: #F5E7D5;
 $color-dark: #914450;
 $color-grey: #C6C6C6;
 $color-textSmall: #9a9a9a;
+$color-white: #fff;
+$color-homeBackground: #F8F8F8;
 
 html {
     font-size: 16px;
@@ -20,29 +22,43 @@ html {
 
 body {
     width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
+    background-color: $color-homeBackground;
 }
+
 header {
     width: 100%;
-    max-width: 1280px;
-    min-height: 90px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: $color-creme;
-    nav {
-        .navbar-toggler {
-            background-color: black;
-        }
-        .nav-link {
-            padding: 0 1rem;
-            font-family: $montserrat;
-            color: $color-dark;
-            text-decoration: none;
+    justify-content: center;
+    >div{
+        width: 100%;
+        max-width: 1280px;
+        min-height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header-col2{
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            nav {
+                .navbar-toggler {
+                    background-color: black;
+                }
+                .nav-link {
+                    padding: 0 1rem;
+                    font-family: $montserrat;
+                    color: $color-dark;
+                    text-decoration: none;
+                }
+            }
+            .rrss{
+                display: flex;
+                gap: 15px;
+            }
         }
     }
 }
+
 
 main {
     width: 100%;
@@ -245,85 +261,58 @@ footer{
     }
 }
 
-.slider {
+.servicios{
     width: 100%;
-    height: 200px;
-    position: relative;
-    margin: auto;
-    overflow-x: scroll;
-    overflow-y: hidden;
-  }  
-  .slider::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .slider .slide {
     display: flex;
-    position: absolute;
-    left: 0;
-    transition: 0.3s left ease-in-out;
-  }
-  
-  .slider .item {
-    margin-right: 10px;
-  }
-  
-  .slider .item:last-child {
-    margin-right: 0;
-  }
-  
-  .ctrl {
-    text-align: center;
-    margin-top: 5px;
-  }
-  
-  .ctrl-btn {
-    padding: 20px 20px;
-    min-width: 50px;
-    background: #fff;
-    border: none;
-    font-weight: 600;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-  
-    position: absolute;
-    top: 50%;
-    margin-top: -27.5px;
-  }
-  
-  .ctrl-btn.pro-prev {
-    left: 0;
-  }
-  
-  .ctrl-btn.pro-next {
-    right: 0;
-  }
-
-    .servicio{
-      /* position: relative; */
-      width: 299px;
-      height: 397px;
-      /* display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center; */
-      border: 1px solid;
-      .elipse{
-          /* width: 76px;
-          height: 76px; */
-          padding: 20px;
-          background-color: #ebebeb;
-          border-radius: 100%;
-      }
-      .servicioTitle{
-        font-size: 27px;
-        font-weight: 700;
-        color: $color-dark;
-      }
-      .servicioDescription{
-        font-size: 18px;
-        font-weight: 400;
-        color: $color-principal;
-      }
+    justify-content: center;
+    padding: 50px 0;
+    &__slider{
+        width: 98%;
+        max-width: 2100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        &__slide{
+            width: 100%;
+            padding: 5px 0;
+            position: relative;
+            overflow-x: scroll;
+            display: flex;
+            gap: 50px;
+            scroll-behavior: smooth;
+            &::-webkit-scrollbar {
+                display: none;
+              }
+        }
     }
+    &__card{
+        flex-shrink: 0;
+        width: 300px;
+        height: 400px;
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: $color-white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        img{
+            object-fit: none;
+            width: 100px;
+            height: 100px;
+        }
+        h3{
+            font-weight: 700;
+            color: $color-principal;
+            font-size: 27px;
+        }
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            color: $color-textSmall;
+            line-height: 19px;
+        }    
+    }
+}
