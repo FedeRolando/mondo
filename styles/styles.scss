@@ -22,17 +22,21 @@ html {
 
 body {
     width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-betweenf;
     background-color: $color-homeBackground;
 }
-
 header {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between ;
+    
     >div{
+        padding: 0 50px;
         width: 100%;
-        max-width: 1280px;
-        min-height: 90px;
+        height: 90px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -64,20 +68,27 @@ main {
     width: 100%;
     .portada {
         position: relative;
+        width: 100%;
+        height: fit-content;
+        opacity: 1;
         img {
+            
             width: 100%;
             height: auto;
+            z-index: 1;
+            opacity: 1;
         }
         .textPortada {
             position: absolute;
-            top: 0;
-            bottom: 0;
+            top: 10px;
             margin-left: 5vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            z-index: 100;
+            opacity: 1;
             .textBig {
-                margin-bottom: 3vw;
+                margin-bottom: 2vw;
                 display: flex;
                 flex-direction: column;
                 font-family: $montserrat;
@@ -86,6 +97,7 @@ main {
                 font-style: black;
                 line-height: calc(1rem + 5vw);
                 color: $color-principal;
+                opacity: 1;
             }
             .textSmall {
                 display: flex;
@@ -261,6 +273,7 @@ footer{
     }
 }
 
+/* Slider Servicios Home */
 .servicios{
     width: 100%;
     display: flex;
@@ -314,5 +327,16 @@ footer{
             color: $color-textSmall;
             line-height: 19px;
         }    
+    }
+}
+
+@media (max-width: 500px) {
+    header{
+        >div{
+        padding: 0 20px;
+        }
+        .rrss{
+            display: none!important;
+        } 
     }
 }
