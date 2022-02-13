@@ -14,6 +14,7 @@
 <body>
 
   <main class="main-contacto">
+    <h1>Contactanos</h1>
     <div class="contacto">
       <form class="contacto__form">
           <div class="contacto__form-nombre">
@@ -28,14 +29,29 @@
             <label for="telefono">Número de contacto</label>
             <input type="text" name="telefono">
           </div>
-          <div class="contacto__form-tema">
-            <div>opcion</div>
-            <div>opcion</div>
-            <div>opcion</div>
-            <div>opcion</div>
+          <div class="contacto__form-acerca">
+            <div class="contacto__form-acerca-title">Acerca de tu consulta...</div>
+            <div class="contacto__form-acerca-options">
+              <div>
+                <label for="presupuestos">Presupuestos</label>
+                <input type="radio" name="about" id="presupuestos" value="presupuestos">
+              </div>
+              <div>
+                <label for="servicios">Servicios</label>
+                <input type="radio" name="about" id="servicios" value="servicios">
+              </div>
+              <div>
+                <label for="trabaja">Trabajá con nosotros</label>
+                <input type="radio" name="about" id="trabaja" value="trabaja">
+              </div>
+              <div>
+                <label for="otro">Otras consultas</label>
+                <input type="radio" name="about" id="otro" value="otro" checked>
+              </div>
+            </div>
           </div>
           <div class="contacto__form-consulta">
-            <label for="consulta"></label>
+            <label for="consulta">Escribe tu consulta</label>
             <textarea name="consulta" id="" cols="30" rows="10"></textarea>
           </div>
       </form>

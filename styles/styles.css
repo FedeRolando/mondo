@@ -138,6 +138,14 @@ header .menu-mobile .rrss {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 40px;
+}
+
+.main-contacto h1 {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 24px;
+  color: #B55158;
 }
 
 .main-contacto .contacto {
@@ -168,7 +176,7 @@ header .menu-mobile .rrss {
   gap: 16px;
 }
 
-.main-contacto .contacto__form div {
+.main-contacto .contacto__form-nombre, .main-contacto .contacto__form-mail, .main-contacto .contacto__form-tel, .main-contacto .contacto__form-consulta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,14 +187,14 @@ header .menu-mobile .rrss {
   gap: 4px;
 }
 
-.main-contacto .contacto__form div label {
+.main-contacto .contacto__form-nombre label, .main-contacto .contacto__form-mail label, .main-contacto .contacto__form-tel label, .main-contacto .contacto__form-consulta label {
   font-family: Montserrat;
   font-weight: 500;
   font-size: 14px;
   color: #000000;
 }
 
-.main-contacto .contacto__form div input[type=text], .main-contacto .contacto__form div input[type=email] {
+.main-contacto .contacto__form-nombre input[type=text], .main-contacto .contacto__form-nombre input[type=email], .main-contacto .contacto__form-mail input[type=text], .main-contacto .contacto__form-mail input[type=email], .main-contacto .contacto__form-tel input[type=text], .main-contacto .contacto__form-tel input[type=email], .main-contacto .contacto__form-consulta input[type=text], .main-contacto .contacto__form-consulta input[type=email] {
   width: 100%;
   max-width: 400px;
   height: 30px;
@@ -194,6 +202,41 @@ header .menu-mobile .rrss {
   background: #FFFFFF;
   border: 1px solid #C6C6C6;
   border-radius: 5px;
+}
+
+.main-contacto .contacto__form-acerca {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  gap: 24px;
+}
+
+.main-contacto .contacto__form-acerca-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  gap: 16px;
+}
+
+.main-contacto .contacto__form-acerca-options div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .main-contacto .contacto__info {

@@ -93,6 +93,13 @@ header {
     padding: 30px 10vw;
     display: flex;
     flex-direction: column;
+    gap: 40px;
+    h1{
+        font-family: Montserrat;
+        font-weight: bold;
+        font-size: 24px;
+        color: #B55158;
+    }
     .contacto{
         display: flex;
         flex-flow: row wrap-reverse;
@@ -103,7 +110,7 @@ header {
             display: flex;
             flex-direction: column;
             gap: 16px;
-            div{
+            &-nombre, &-mail, &-tel, &-consulta{
                 display: flex;
                 flex-direction: column;
                 gap: 4px;
@@ -121,6 +128,24 @@ header {
                     background: #FFFFFF;
                     border: 1px solid $color-grey;
                     border-radius: 5px;
+                }
+            }
+            &-acerca{
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 24px;
+                &-title{
+
+                }
+                &-options{
+                    display: flex;
+                    flex-flow: column nowrap;
+                    gap: 16px;
+                    div{
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-between;
+                    }
                 }
             }
         }
