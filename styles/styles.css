@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* RESET */
 * {
   margin: 0;
@@ -7,6 +8,10 @@
 }
 
 /* VARS */
+.d-none {
+  display: none !important;
+}
+
 html {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
@@ -29,6 +34,7 @@ body {
 }
 
 header {
+  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,7 +59,7 @@ header > div {
           align-items: center;
 }
 
-header > div .header-col2 {
+header > div .menu-desktop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,22 +69,213 @@ header > div .header-col2 {
   gap: 35px;
 }
 
-header > div .header-col2 nav .navbar-toggler {
-  background-color: black;
+header > div .menu-desktop nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
 }
 
-header > div .header-col2 nav .nav-link {
-  padding: 0 1rem;
+header > div .menu-desktop nav .nav-link {
   font-family: "Montserrat", sans-serif;
   color: #914450;
   text-decoration: none;
 }
 
-header > div .header-col2 .rrss {
+header > div .menu-desktop .rrss {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
+  font-size: 24px;
+}
+
+header .menu-mobile {
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  background-color: #9a9a9a;
+}
+
+header .menu-mobile nav {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+
+header .menu-mobile .rrss {
+  color: #B55158;
+}
+
+/* PÁGINA CONTACTO */
+.main-contacto {
+  margin-top: 50px;
+  padding: 30px 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-contacto .contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap-reverse;
+          flex-flow: row wrap-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+}
+
+.main-contacto .contacto__form {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.main-contacto .contacto__form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+
+.main-contacto .contacto__form div label {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  color: #000000;
+}
+
+.main-contacto .contacto__form div input[type=text], .main-contacto .contacto__form div input[type=email] {
+  width: 100%;
+  max-width: 400px;
+  height: 30px;
+  padding-left: 8px;
+  background: #FFFFFF;
+  border: 1px solid #C6C6C6;
+  border-radius: 5px;
+}
+
+.main-contacto .contacto__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+
+.main-contacto .contacto__info p {
+  max-width: 400px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #B55158;
+}
+
+.main-contacto .contacto__info__tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #B55158;
+}
+
+.main-contacto .contacto__info__tel-title {
+  font-weight: bold;
+}
+
+.main-contacto .contacto__info__tel-num {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.main-contacto .contacto__info__horario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #B55158;
+}
+
+.main-contacto .contacto__info__horario-title {
+  font-weight: bold;
+}
+
+.main-contacto .contacto__info__horario-hours {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  font-weight: 500;
+}
+
+.main-contacto .submit-contact-form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-contacto .submit-contact-form button {
+  width: 200px;
+  height: 50px;
+  background-color: #B55158;
+  border: none;
+  border-radius: 48px;
+  font-size: 18px;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
 main {

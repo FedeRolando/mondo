@@ -17,35 +17,52 @@
     <header>
         <div>
             <img src="assets/logo-header.png" class="logo">
-            <div class="header-col2">
-                <nav class="navbar">
+            <div class="menu-desktop">
+                <nav>
                     <a class="nav-link" href="#">Agencia</a>
                     <a class="nav-link" href="servicio/servicio.html">Servicios</a>
                     <a class="nav-link" href="portfolio/portfolio.html">Portfolio</a>
                     <a class="nav-link" href="contacto.html">Contacto</a>
                 </nav>
                 <div class="rrss">
-                    <img src="assets/instagram-header.png" alt="icono instagram mondo">
-                    <img src="assets/linkedin-header.png" alt="icono linkedin mondo">
-                    <img src="assets/facebook-header.png" alt="icono facebook mondo">
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <a href=""><i class="fab fa-facebook"></i></a>
                 </div>
+            </div>
+            <button class="btn_toggle-menu d-none">Ver menu</button>
+        </div>
+
+        <div class="menu-mobile">
+            <nav>
+                <a class="nav-link" href="index.html">Agencia</a>
+                <a class="nav-link" href="servicio/servicio.html">Servicios</a>
+                <a class="nav-link" href="portfolio/portfolio.html">Portfolio</a>
+                <a class="nav-link" href="contacto.html">Contacto</a>
+            </nav>
+            <div class="rrss">
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+                <a href=""><i class="fab fa-facebook"></i></a>
             </div>
         </div>
     </header>
 
-  <main>
-    <div class="portada">
-      <img  class="portada__img" src="assets/portada-nueva.png" alt="">
-      <div class="textPortada">
-        <div class="textBig">
-          <span>Potenciemos</span>
-          <span>tu negocio juntos</span>
-        </div>
-        <div class="textSmall">
-          <span>Mondo engloba profesionales de distintas áreas para</span> 
-          <span>brindarte resultados. Diseño, Comunicación, Gestión,</span> 
-          <span>Fotografía, Programación y Asesorías.</span>
-          <span class="bold">Mondo se adapta a tus necesidades.</span>
+    <main>
+        <div class="portada">
+            <img  class="portada__img" src="assets/portada-nueva.png" alt="">
+            <div class="textPortada">
+                <div class="textBig">
+                    <span>Potenciemos</span>
+                    <span>tu negocio juntos</span>
+                </div>
+                <div class="textSmall">
+                    <span>Mondo engloba profesionales de distintas áreas para</span> 
+                    <span>brindarte resultados. Diseño, Comunicación, Gestión,</span> 
+                    <span>Fotografía, Programación y Asesorías.</span>
+                    <span class="bold">Mondo se adapta a tus necesidades.</span>
+                </div>
+            </div>
         </div>
 
         <!-- Servicios nuevo -->
@@ -88,7 +105,7 @@
                 <img src="assets/arrow-right.png" class="btnScrollRight">
             </div>
 
-        </section>
+        </section>  
 
 
 
@@ -136,8 +153,10 @@
         <div class="footer_copyright">Copyright© 2021 Terms</div>
     </footer>
 
-  <script src="scripts\slider-servicios-home.js"></script>
-  <script src="scripts\mediaQueries.js"></script>
+    <script src="https://kit.fontawesome.com/06efabafe0.js" crossorigin="anonymous"></script>
+    <script src="scripts\slider-servicios-home.js"></script>
+    <script src="scripts\mediaQueries.js"></script>
+    <script src="/scripts/menu-responsive.js"></script>
 </body>
 
 
